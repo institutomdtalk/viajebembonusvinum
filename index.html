@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wine English — English for Travelers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono&family=Bodoni+Moda:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:#F8F5EE;
+  --bg-warm:#F1ECE1;
+  --bg-card:#FFFFFF;
+  --ink:#0D1B2A;
+  --ink-s:#2A3547;
+  --ink-m:#7D8699;
+  --navy:#162235;
+  --navy-d:#0D1B2A;
+  --navy-l:#1E2F45;
+  --sky:#B8963A;
+  --sky-l:#E0C47A;
+  --sky-bg:#F7F1E1;
+  --gold:#C9A84C;
+  --gold-bg:#FBF7EC;
+  --red:#C44B3F;
+  --red-bg:#FCEEED;
+  --green:#2D7A5F;
+  --green-bg:#EEF7F3;
+  --plum:#6E4B8A;
+  --plum-bg:#F3EEF8;
+  --brd:#E6E0D2;
+  --brd-l:#EFEAE0;
+  --fd:'Cormorant Garamond',Georgia,serif;
+  --fb:'DM Sans',sans-serif;
+  --fm:'IBM Plex Mono',monospace;
+  --r:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--ink);line-height:1.75;font-size:16.5px;-webkit-font-smoothing:antialiased}
+
+/* ═══ HERO ═══ */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(160deg,#070F18 0%,#0D1B2A 25%,#162235 50%,#0F1D2E 75%,#070F18 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 45% at 30% 50%,rgba(201,168,76,.1) 0%,transparent 55%),radial-gradient(ellipse 50% 40% at 70% 40%,rgba(201,168,76,.06) 0%,transparent 50%);z-index:1}
+.hero::after{content:'';position:absolute;inset:0;opacity:.4;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 28l2 2-2 2-2-2z' fill='%23C9A84C' fill-opacity='.04'/%3E%3C/svg%3E");z-index:1}
+
+.hero-c{position:relative;z-index:2;text-align:center;padding:2rem;max-width:800px;animation:hIn 1.4s ease-out}
+@keyframes hIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+.hero-icon{display:block;margin:0 auto 1.5rem;width:34px;height:34px;color:var(--sky-l);opacity:.75}
+.hero-icon svg{width:34px;height:34px}
+.hero-badge{display:inline-block;font-family:var(--fb);font-size:.67rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--sky-l);border:1px solid rgba(224,196,122,.25);padding:.45rem 1.4rem;border-radius:100px;margin-bottom:2rem;background:rgba(224,196,122,.06)}
+
+.hero h1{font-family:var(--fd);font-size:clamp(2.5rem,5.5vw,4.6rem);font-weight:400;color:#FDF8F0;line-height:1.12;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--sky-l);font-weight:400}
+
+.hero-line{width:50px;height:1px;background:var(--sky);margin:2rem auto;opacity:.3}
+.hero-sub{font-family:var(--fd);font-size:1.15rem;color:rgba(253,248,240,.45);font-weight:400;font-style:italic;line-height:1.7;max-width:540px;margin:0 auto}
+
+.hero-scroll{margin-top:3.5rem;display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(253,248,240,.25);font-family:var(--fb);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;animation:pls 2.5s ease-in-out infinite}
+.hero-scroll svg{width:16px;height:16px;stroke:rgba(253,248,240,.25)}
+@keyframes pls{0%,100%{opacity:.35;transform:translateY(0)}50%{opacity:.85;transform:translateY(5px)}}
+
+/* ═══ NAV ═══ */
+.nav{position:sticky;top:0;z-index:100;background:rgba(253,248,240,.93);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--brd-l)}
+.nav-in{max-width:1200px;margin:0 auto;padding:0 2rem;overflow-x:auto;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav-ul{display:flex;list-style:none;white-space:nowrap}
+.nav-ul a{display:block;padding:.9rem 1rem;font-family:var(--fb);font-size:.65rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-m);text-decoration:none;border-bottom:2px solid transparent;transition:all .3s ease}
+.nav-ul a:hover{color:var(--navy);border-bottom-color:var(--navy)}
+
+/* ═══ MAIN ═══ */
+.main{max-width:880px;margin:0 auto;padding:0 2rem 6rem}
+
+/* ═══ SECTION ═══ */
+.sc{padding-top:4.5rem}
+.sc-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fb);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.7rem}
+.sc-tag.blue{color:var(--sky)} .sc-tag.gold{color:var(--gold)} .sc-tag.red{color:var(--red)}
+.sc-tag .n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;font-size:.56rem;font-weight:700;letter-spacing:0;color:#fff}
+.sc-tag.blue .n{background:var(--sky)} .sc-tag.gold .n{background:var(--gold)} .sc-tag.red .n{background:var(--red)}
+
+.sc h2{font-family:var(--fd);font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:500;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+.sc-sub{font-family:var(--fd);font-size:1.02rem;color:var(--ink-m);font-weight:400;font-style:italic;margin-bottom:2rem;line-height:1.6}
+.sc-intro{font-size:.97rem;color:var(--ink-s);line-height:1.85;margin-bottom:2rem;max-width:740px}
+
+/* ═══ CARDS ═══ */
+.gr{margin-bottom:2.4rem}
+.gr-t{font-family:var(--fb);font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-s);margin-bottom:.85rem;padding-bottom:.45rem;border-bottom:1px solid var(--brd)}
+
+.cd{background:var(--bg-card);border:1px solid var(--brd-l);border-radius:var(--r);padding:1.15rem 1.4rem;margin-bottom:.5rem;transition:all .25s ease}
+.cd:hover{border-color:var(--brd);box-shadow:0 4px 16px rgba(20,27,45,.05);transform:translateY(-1px)}
+.cd .en{font-family:var(--fd);font-size:1.12rem;font-weight:500;color:var(--ink);line-height:1.5;margin-bottom:.15rem}
+.cd .pt{font-family:var(--fb);font-size:.84rem;color:var(--ink-m);line-height:1.5}
+
+.nt{margin-top:.5rem;font-family:var(--fb);font-size:.74rem;padding:.45rem .75rem;border-radius:6px;line-height:1.55;border-left:3px solid}
+.nt.blue{color:#2A5A8A;background:var(--sky-bg);border-color:var(--sky)}
+.nt.gold{color:#8B6914;background:var(--gold-bg);border-color:var(--gold)}
+.nt.red{color:var(--red);background:var(--red-bg);border-color:var(--red)}
+.nt.green{color:var(--green);background:var(--green-bg);border-color:var(--green)}
+.nt.plum{color:var(--plum);background:var(--plum-bg);border-color:var(--plum)}
+
+/* ═══ DIALOGUE ═══ */
+.dlg{background:var(--bg-card);border:1px solid var(--brd);border-radius:12px;padding:1.7rem 1.9rem;margin:2rem 0 2.5rem;position:relative;overflow:hidden}
+.dlg::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--sky),var(--navy))}
+.dlg-h{font-family:var(--fb);font-size:.63rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sky);margin-bottom:.2rem}
+.dlg-ctx{font-family:var(--fb);font-size:.8rem;color:var(--ink-m);font-style:italic;margin-bottom:1.3rem}
+
+.ln{display:flex;gap:.85rem;margin-bottom:.85rem;align-items:flex-start}
+.av{flex-shrink:0;width:33px;height:33px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fb);font-size:.53rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:2px}
+.av.you{background:var(--sky-bg);color:var(--sky);border:1.5px solid rgba(201,168,76,.2)}
+.av.them{background:var(--gold-bg);color:#8B6914;border:1.5px solid rgba(201,168,76,.25)}
+.av.off{background:#F0EDF5;color:var(--plum);border:1.5px solid rgba(110,75,138,.2)}
+
+.bb{flex:1}
+.bb .en{font-family:var(--fd);font-size:.98rem;color:var(--ink);line-height:1.5;font-weight:500}
+.bb .pt{font-family:var(--fb);font-size:.78rem;color:var(--ink-m);line-height:1.5;margin-top:.1rem}
+
+/* ═══ VOCAB ═══ */
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:.4rem;margin:1.5rem 0 2rem}
+.vi{background:var(--bg-card);border:1px solid var(--brd-l);border-radius:8px;padding:.75rem 1rem;transition:all .2s ease}
+.vi:hover{border-color:var(--brd);box-shadow:0 2px 10px rgba(20,27,45,.04)}
+.vi .en{font-family:var(--fd);font-size:.93rem;font-weight:500;color:var(--ink)}
+.vi .pt{font-family:var(--fb);font-size:.76rem;color:var(--ink-m)}
+
+/* ═══ BLOCKS ═══ */
+.bk{border-radius:12px;padding:1.6rem 1.7rem;margin:2rem 0;position:relative;border:1px solid}
+.bk::before{content:'';position:absolute;top:-5px;left:1.5rem;width:9px;height:9px;transform:rotate(45deg);box-shadow:0 0 0 4px var(--bg)}
+.bk h4{font-family:var(--fb);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.55rem}
+.bk p{font-size:.92rem;color:var(--ink-s);line-height:1.75}
+
+.bk.tip{background:linear-gradient(135deg,var(--sky-bg),var(--bg));border-color:rgba(201,168,76,.15)}
+.bk.tip::before{background:var(--sky)} .bk.tip h4{color:var(--sky)}
+
+.bk.cultural{background:linear-gradient(135deg,var(--plum-bg),var(--bg));border-color:rgba(110,75,138,.12)}
+.bk.cultural::before{background:var(--plum)} .bk.cultural h4{color:var(--plum)}
+
+.bk.alert{background:linear-gradient(135deg,var(--red-bg),var(--bg));border-color:rgba(196,75,63,.15)}
+.bk.alert::before{background:var(--red)} .bk.alert h4{color:var(--red)}
+
+.bk.warn{background:linear-gradient(135deg,var(--gold-bg),var(--bg));border-color:rgba(201,168,76,.2)}
+.bk.warn::before{background:var(--gold)} .bk.warn h4{color:#8B6914}
+
+/* ═══ SIGNS ═══ */
+.sign-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.5rem;margin:1.5rem 0 2rem}
+.sign-item{background:var(--navy-d);border-radius:8px;padding:.9rem 1.1rem;color:#FDF8F0;display:flex;align-items:center;gap:.75rem}
+.sign-item .icon{flex-shrink:0;display:flex;color:var(--gold)}
+.sign-item .icon svg{width:22px;height:22px}
+.sign-item .en{font-family:var(--fm);font-size:.82rem;font-weight:400;color:#FDF8F0;letter-spacing:.03em}
+.sign-item .pt{font-family:var(--fb);font-size:.72rem;color:rgba(253,248,240,.5)}
+
+/* ═══ SEP ═══ */
+.sep{display:flex;align-items:center;justify-content:center;gap:1rem;padding:3rem 0 0}
+.sep::before,.sep::after{content:'';flex:1;max-width:100px;height:1px;background:var(--brd)}
+.sep .d{width:5px;height:5px;background:var(--sky);transform:rotate(45deg);opacity:.35}
+
+/* ═══ TRANSIT BANNER ═══ */
+.transit-banner{background:linear-gradient(135deg,var(--navy-d) 0%,var(--navy) 50%,var(--navy-d) 100%);padding:3rem 2rem;text-align:center;margin-top:4rem;position:relative;overflow:hidden}
+.transit-banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='30' height='30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 14h1v2h-1z' fill='%23C9A84C' fill-opacity='.06'/%3E%3C/svg%3E")}
+.transit-banner .tc{position:relative;z-index:1}
+.transit-banner h3{font-family:var(--fd);font-size:1.7rem;font-weight:400;color:rgba(253,248,240,.85);margin-bottom:.4rem}
+.transit-banner p{font-family:var(--fb);font-size:.85rem;color:rgba(253,248,240,.4);max-width:480px;margin:0 auto;line-height:1.6}
+
+/* ═══ FOOTER ═══ */
+.footer{text-align:center;padding:3.5rem 2rem;border-top:1px solid var(--brd-l);margin-top:3rem}
+.footer-b{font-family:var(--fd);font-size:1.25rem;color:var(--ink);margin-bottom:.35rem}
+.footer-t{font-family:var(--fb);font-size:.76rem;color:var(--ink-m)}
+.sig{display:flex;flex-direction:column;align-items:center;gap:1.1rem;margin-top:2.2rem;padding-top:2rem;border-top:1px solid var(--brd-l)}
+.sig-n{font-family:var(--fd);font-size:1.05rem;color:var(--ink)}
+.sig-r{font-family:var(--fb);font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:.15rem}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:768px){
+  .main{padding:0 1.2rem 4rem}
+  .dlg{padding:1.3rem}
+  .sc{padding-top:3.5rem}
+  .vg,.sign-grid{grid-template-columns:1fr}
+  .nav-ul a{padding:.8rem .75rem;font-size:.6rem}
+}
+
+/* ═══ ANIM ═══ */
+.fi{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.fi.v{opacity:1;transform:translateY(0)}
+
+/* ═══ Wine English components ═══ */
+.wv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:.9rem 0 2.2rem}
+.wv{background:var(--bg-card);border:1px solid var(--brd-l);border-radius:var(--r);padding:1rem 1.2rem}
+.wv-en{font-family:var(--fd);font-size:1.25rem;font-weight:500;color:var(--ink);line-height:1.25}
+.wv-type{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin:.2rem 0 .35rem}
+.wv.verb .wv-type{font-family:var(--fm);letter-spacing:0;text-transform:none;font-size:.72rem;font-weight:400;color:var(--ink-m)}
+.wv-pt{font-size:.84rem;color:var(--ink-s);line-height:1.55}
+.wv-ex{margin-top:.65rem;padding-top:.65rem;border-top:1px dashed var(--brd);font-family:var(--fd);font-style:italic;font-size:1.02rem;color:var(--ink);line-height:1.45}
+.wv-ex span{display:block;font-family:var(--fb);font-style:normal;font-size:.76rem;color:var(--ink-m);margin-top:.2rem}
+.wt-wrap{overflow-x:auto;margin:.9rem 0 2.2rem}
+.wt{width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--brd-l);border-radius:var(--r);overflow:hidden;font-size:.84rem;line-height:1.55}
+.wt th{background:var(--navy);color:#FDF8F0;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-align:left;padding:.7rem 1rem}
+.wt td{padding:.65rem 1rem;border-top:1px solid var(--brd-l);vertical-align:top;color:var(--ink-s)}
+.wt td:first-child{font-family:var(--fd);font-size:1.05rem;font-weight:500;color:var(--ink)}
+.wt td em{font-family:var(--fd);font-size:1rem;color:var(--ink)}
+.badge-j{display:inline-block;font-family:var(--fb);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.08rem .5rem;border-radius:100px;background:var(--gold-bg);color:#8A6D22;border:1px solid rgba(201,168,76,.35);vertical-align:middle;margin-left:.3rem}
+.hl{background:var(--sky-bg);border:1px solid rgba(201,168,76,.25);border-radius:12px;padding:1.3rem 1.4rem;margin:.9rem 0 2.2rem}
+.hl-t{font-family:var(--fd);font-size:1.3rem;color:var(--ink);margin-bottom:.6rem}
+.hl .wt-wrap{margin:0}
+.rg{background:var(--bg-card);border:1px solid var(--brd-l);border-left:3px solid var(--sky);border-radius:0 var(--r) var(--r) 0;padding:1rem 1.25rem;margin-bottom:.6rem}
+.rg-n{font-family:var(--fd);font-size:1.3rem;font-weight:500;color:var(--ink)}
+.rg-c{font-family:var(--fb);font-size:.7rem;color:var(--ink-m)}
+.rg-d{font-size:.88rem;color:var(--ink-s);line-height:1.7;margin-top:.2rem}
+.rg:last-of-type{margin-bottom:2.2rem}
+.tn{background:var(--navy);border-radius:12px;padding:1.6rem 1.8rem;margin:.9rem 0 1rem}
+.tn-w{font-family:var(--fd);font-size:1.4rem;color:#FDF8F0;line-height:1.3}
+.tn-r{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--sky-l);margin:.3rem 0 1rem}
+.tn-t{font-family:var(--fd);font-style:italic;font-size:1.1rem;line-height:1.7;color:rgba(253,248,240,.92)}
+.tn-p{margin-top:.9rem;padding-top:.9rem;border-top:1px solid rgba(253,248,240,.12);font-size:.82rem;line-height:1.65;color:rgba(253,248,240,.6)}
+.qz{background:var(--bg-card);border:1px solid var(--brd-l);border-radius:var(--r);padding:1.3rem 1.4rem;margin-bottom:1rem}
+.qz-q{font-weight:600;font-size:.95rem;color:var(--ink);margin-bottom:.8rem;line-height:1.55}
+.qz-os{display:flex;flex-direction:column;gap:.45rem}
+.qz-o{display:block;width:100%;text-align:left;font-family:var(--fd);font-size:1.08rem;color:var(--ink);padding:.6rem .95rem;border:1px solid var(--brd);border-radius:8px;background:var(--bg);cursor:pointer;transition:border-color .2s ease}
+.qz-o:hover{border-color:var(--sky)}
+.qz-o.ok{border-color:var(--green);background:var(--green-bg)}
+.qz-o.no{border-color:var(--red);background:var(--red-bg)}
+.qz.done .qz-o{cursor:default}
+.qz-f{display:none;font-size:.84rem;line-height:1.65;color:var(--ink-s);padding:.75rem .95rem;margin-top:.7rem;border-left:3px solid var(--sky);background:var(--sky-bg)}
+.qz.done .qz-f{display:block}
+.bk.final{background:var(--navy);border:none;text-align:center;padding:2.2rem 2rem}
+.bk.final h4{font-family:var(--fd);font-size:1.6rem;font-weight:400;letter-spacing:0;text-transform:none;color:var(--sky-l)}
+.bk.final p{color:rgba(253,248,240,.75)}
+.bk.final .bk-sign{margin-top:1rem;font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(224,196,122,.55)}
+.bk.final::before{content:none}
+@media(max-width:768px){.wv-grid{grid-template-columns:1fr}}
+
+/* ═══ STANDARD FOOTER — identical on every Viaje Bem module ═══ */
+footer.footer{text-align:center;padding:3.5rem 2rem;border-top:1px solid #ECEEF4;margin-top:3rem;line-height:1.75}
+footer.footer .footer-b{font-family:'Bodoni Moda',Georgia,serif;font-size:1.25rem;font-weight:400;color:#141B2D;margin-bottom:.35rem}
+footer.footer .footer-t{font-family:'Nunito Sans',sans-serif;font-size:.76rem;color:#7A8299;line-height:1.75}
+footer.footer .sig{display:flex;flex-direction:column;align-items:center;gap:1.1rem;margin-top:2.2rem;padding-top:2rem;border-top:1px solid #ECEEF4}
+footer.footer .sig-n{font-family:'Bodoni Moda',Georgia,serif;font-size:1.05rem;font-weight:400;color:#141B2D}
+footer.footer .sig-r{font-family:'Nunito Sans',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C;margin-top:.15rem}
+
+/* ═══ VIAJE BEM — course-wide standard (same on every module) ═══ */
+main.main,main.course-body{max-width:880px}
+.vb-pager{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:stretch;margin:3.5rem 0 0;font-family:'Nunito Sans',sans-serif}
+.vb-pager a{text-decoration:none;color:#141B2D}
+.vb-card{display:flex;flex-direction:column;gap:.35rem;padding:1.1rem 1.3rem;border:1px solid #E3E5EC;border-radius:10px;background:#FFFFFF;transition:border-color .2s ease,transform .2s ease}
+.vb-card:hover{border-color:#C9A84C;transform:translateY(-2px)}
+.vb-next{text-align:right}
+.vb-dir{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7A8299}
+.vb-num{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#C9A84C}
+.vb-t{font-family:'Bodoni Moda',Georgia,serif;font-size:1.08rem;line-height:1.3;color:#141B2D}
+.vb-home{align-self:center;display:inline-flex;align-items:center;padding:.55rem 1.1rem;border:1px solid #E3E5EC;border-radius:100px;background:#FFFFFF;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7A8299!important;white-space:nowrap}
+.vb-home:hover{border-color:#C9A84C;color:#141B2D!important}
+.vb-empty{visibility:hidden}
+.vb-dl{display:flex;flex-direction:column;align-items:center;gap:.55rem;margin:3.5rem 0 0;font-family:'Nunito Sans',sans-serif}
+.vb-dl-btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.6rem;border-radius:100px;background:#141B2D;color:#FFFFFF!important;text-decoration:none;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid #141B2D;transition:background .2s ease,border-color .2s ease}
+.vb-dl-btn:hover{background:#1F2A45;border-color:#C9A84C}
+.vb-dl-btn svg{width:16px;height:16px;fill:none;stroke:#C9A84C;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.vb-dl-meta{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7A8299}
+.vb-dl + .vb-pager{margin-top:2.2rem}
+@media(max-width:768px){.vb-pager{grid-template-columns:1fr}.vb-next{text-align:left}.vb-home{justify-self:center;order:3}.vb-empty{display:none}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="hero-c">
+    <div class="hero-badge">English for Travelers — Módulo Bônus</div>
+    <h1>Wine<br><em>English</em></h1>
+    <div class="hero-line"></div>
+    <p class="hero-sub">Falar sobre vinho com elegância e precisão.<br>Contexto social, viagens e networking.</p>
+    <div class="hero-scroll">Explore o módulo<svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
+  </div>
+</section>
+<nav class="nav">
+  <div class="nav-in">
+    <ul class="nav-ul">
+      <li><a href="#s1">Vocabulário Essencial</a></li>
+      <li><a href="#s2">Verbos &amp; Phrasal Verbs</a></li>
+      <li><a href="#s3">Collocations</a></li>
+      <li><a href="#s4">Regiões &amp; Estilos</a></li>
+      <li><a href="#s5">Expressões &amp; Jargões</a></li>
+      <li><a href="#s6">Tasting Notes</a></li>
+      <li><a href="#s7">Situações Reais</a></li>
+      <li><a href="#s8">Prática</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="main">
+<section class="sc" id="s1">
+<div class="sc-tag blue"><span class="n">1</span> Essential Vocabulary</div>
+<h2>Vocabulário Essencial</h2>
+<p class="sc-sub">As palavras que você precisa antes de abrir a primeira garrafa</p>
+<p class="sc-intro">Antes de descrever um vinho ou fazer um pedido em um restaurante no exterior, é preciso dominar o vocabulário-base. Em inglês, o léxico do vinho mistura termos franceses anglicizados, jargões de sommeliers e expressões cotidianas. Neste capítulo, você aprende as palavras que aparecem em cardápios, rótulos e conversas de networking.</p><div class="gr"><div class="gr-t">A Garrafa &amp; o Serviço</div></div><div class="wv-grid"><div class="wv"><div class="wv-en">bottle</div><div class="wv-type">noun</div><div class="wv-pt">garrafa (750ml, padrão)</div><div class="wv-ex">"Shall we order a bottle or go by the glass?"<span>Pedimos uma garrafa ou por taça?</span></div></div><div class="wv"><div class="wv-en">glass</div><div class="wv-type">noun</div><div class="wv-pt">taça / copo</div><div class="wv-ex">"I'll have a glass of the Burgundy, please."<span>Vou querer uma taça do Borgonha, por favor.</span></div></div><div class="wv"><div class="wv-en">carafe</div><div class="wv-type">noun</div><div class="wv-pt">jarro / decanter de mesa (para vinho da casa)</div><div class="wv-ex">"We'd like a half-carafe of the house red."<span>Gostaríamos de meio jarro do tinto da casa.</span></div></div><div class="wv"><div class="wv-en">decanter</div><div class="wv-type">noun</div><div class="wv-pt">decanter (para oxigenar vinhos encorpados)</div><div class="wv-ex">"The sommelier recommended decanting the wine."<span>O sommelier recomendou decantar o vinho.</span></div></div><div class="wv"><div class="wv-en">cork / screw cap</div><div class="wv-type">noun</div><div class="wv-pt">rolha / tampa de rosca</div><div class="wv-ex">"More New World wines are moving to screw caps."<span>Cada vez mais vinhos do Novo Mundo adotam tampa de rosca.</span></div></div><div class="wv"><div class="wv-en">vintage</div><div class="wv-type">noun / adj</div><div class="wv-pt">safra (ano de colheita); também: clássico, de época</div><div class="wv-ex">"This is a spectacular 2016 vintage."<span>Esta é uma safra 2016 espetacular.</span></div></div><div class="wv"><div class="wv-en">label</div><div class="wv-type">noun</div><div class="wv-pt">rótulo</div><div class="wv-ex">"The label tells you the grape variety and region."<span>O rótulo informa a uva e a região.</span></div></div><div class="wv"><div class="wv-en">cellar</div><div class="wv-type">noun / verb</div><div class="wv-pt">adega; guardar em adega</div><div class="wv-ex">"They have an impressive wine cellar downstairs."<span>Eles têm uma adega impressionante no subsolo.</span></div></div><div class="wv"><div class="wv-en">sommelier</div><div class="wv-type">noun · jargão</div><div class="wv-pt">sommelier (especialista em vinhos de restaurante)</div><div class="wv-ex">"Ask the sommelier for a food pairing suggestion."<span>Peça ao sommelier uma sugestão de harmonização.</span></div></div><div class="wv"><div class="wv-en">wine list / wine menu</div><div class="wv-type">noun phrase</div><div class="wv-pt">carta de vinhos</div><div class="wv-ex">"Could we see the wine list, please?"<span>Poderíamos ver a carta de vinhos, por favor?</span></div></div><div class="wv"><div class="wv-en">corkage</div><div class="wv-type">noun · jargão</div><div class="wv-pt">taxa cobrada pelo restaurante quando o cliente traz seu próprio vinho</div><div class="wv-ex">"The restaurant charges a $15 corkage fee."<span>O restaurante cobra $15 de corkage.</span></div></div><div class="wv"><div class="wv-en">by the glass / by the bottle</div><div class="wv-type">phrase</div><div class="wv-pt">vendido por taça / por garrafa</div><div class="wv-ex">"Is the Barolo available by the glass?"<span>O Barolo é servido por taça?</span></div></div></div><div class="gr"><div class="gr-t">Uvas &amp; Estilos</div></div><div class="wv-grid"><div class="wv"><div class="wv-en">grape variety / varietal</div><div class="wv-type">noun</div><div class="wv-pt">variedade de uva / varietal (vinho feito de uma só uva)</div><div class="wv-ex">"Pinot Noir is a notoriously finicky grape variety."<span>Pinot Noir é uma variedade notoriamente exigente.</span></div></div><div class="wv"><div class="wv-en">blend</div><div class="wv-type">noun / verb</div><div class="wv-pt">assemblage / mistura de uvas ou vinhos</div><div class="wv-ex">"Bordeaux wines are typically a blend of Cabernet and Merlot."<span>Vinhos de Bordeaux são tipicamente um blend de Cabernet e Merlot.</span></div></div><div class="wv"><div class="wv-en">still wine</div><div class="wv-type">noun</div><div class="wv-pt">vinho tranquilo (sem borbulhas)</div><div class="wv-ex">"I prefer still wine over sparkling at dinner."<span>Prefiro vinho tranquilo ao espumante no jantar.</span></div></div><div class="wv"><div class="wv-en">sparkling wine</div><div class="wv-type">noun</div><div class="wv-pt">vinho espumante</div><div class="wv-ex">"Champagne is the most celebrated sparkling wine."<span>Champagne é o espumante mais celebrado.</span></div></div><div class="wv"><div class="wv-en">rosé</div><div class="wv-type">noun / adj</div><div class="wv-pt">rosé / rosado</div><div class="wv-ex">"A dry Provençal rosé pairs beautifully with seafood."<span>Um rosé seco provençal harmoniza perfeitamente com frutos do mar.</span></div></div><div class="wv"><div class="wv-en">fortified wine</div><div class="wv-type">noun</div><div class="wv-pt">vinho fortificado (Porto, Xerez, Madeira)</div><div class="wv-ex">"Port is a fortified wine from northern Portugal."<span>Porto é um vinho fortificado do norte de Portugal.</span></div></div></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s2">
+<div class="sc-tag blue"><span class="n">2</span> Verbs & Phrasal Verbs</div>
+<h2>Verbos, Phrasal Verbs &amp; Phrasal Nouns</h2>
+<p class="sc-sub">A gramática do vinho em ação — o que você faz com ele e como descreve isso</p>
+<div class="gr"><div class="gr-t">Verbos Fundamentais</div></div><div class="wv-grid"><div class="wv verb"><div class="wv-en">to swirl</div><div class="wv-type">swirl the glass / swirl the wine</div><div class="wv-pt">girar / rodopiar a taça</div><div class="wv-ex">"Always swirl the wine before smelling it."<span>Sempre gire o vinho antes de cheirá-lo.</span></div></div><div class="wv verb"><div class="wv-en">to sniff / to smell</div><div class="wv-type">sniff the bouquet</div><div class="wv-pt">farejar / cheirar</div><div class="wv-ex">"Take a moment to sniff the bouquet."<span>Reserve um momento para cheirar o bouquet.</span></div></div><div class="wv verb"><div class="wv-en">to sip</div><div class="wv-type">sip [wine] slowly</div><div class="wv-pt">sorver / tomar em pequenos goles</div><div class="wv-ex">"Sip it slowly — don't gulp it."<span>Tome em pequenos goles — não engula de uma vez.</span></div></div><div class="wv verb"><div class="wv-en">to taste</div><div class="wv-type">taste a wine / taste notes of [fruit]</div><div class="wv-pt">degustar / perceber notas de sabor</div><div class="wv-ex">"I can taste notes of dark cherry and tobacco."<span>Consigo perceber notas de cereja negra e tabaco.</span></div></div><div class="wv verb"><div class="wv-en">to decant</div><div class="wv-type">decant [wine] for [time]</div><div class="wv-pt">decantar</div><div class="wv-ex">"You should decant this Barolo for at least two hours."<span>Você deve decantar este Barolo por pelo menos duas horas.</span></div></div><div class="wv verb"><div class="wv-en">to age / to mature</div><div class="wv-type">age in oak / mature in bottle</div><div class="wv-pt">envelhecer / amadurecer</div><div class="wv-ex">"This wine aged for 18 months in French oak."<span>Este vinho envelheceu 18 meses em carvalho francês.</span></div></div><div class="wv verb"><div class="wv-en">to pair / to complement</div><div class="wv-type">pair [wine] with [food]</div><div class="wv-pt">harmonizar / combinar</div><div class="wv-ex">"This Riesling pairs beautifully with Thai food."<span>Este Riesling harmoniza magnificamente com comida tailandesa.</span></div></div><div class="wv verb"><div class="wv-en">to recommend</div><div class="wv-type">recommend a bottle / recommend something in the [price] range</div><div class="wv-pt">recomendar</div><div class="wv-ex">"Could you recommend something under $80?"<span>Você poderia recomendar algo abaixo de $80?</span></div></div><div class="wv verb"><div class="wv-en">to breathe</div><div class="wv-type">let [wine] breathe</div><div class="wv-pt">deixar o vinho respirar / oxigenar</div><div class="wv-ex">"Let the wine breathe for 30 minutes."<span>Deixe o vinho respirar por 30 minutos.</span></div></div><div class="wv verb"><div class="wv-en">to linger</div><div class="wv-type">the finish lingers</div><div class="wv-pt">permanecer / persistir (do final na boca)</div><div class="wv-ex">"The finish lingers beautifully for almost a minute."<span>O final persiste magnificamente por quase um minuto.</span></div></div><div class="wv verb"><div class="wv-en">to develop</div><div class="wv-type">develop complexity / develop in the glass</div><div class="wv-pt">desenvolver (aromas, complexidade)</div><div class="wv-ex">"The wine develops beautifully in the glass over time."<span>O vinho se desenvolve magnificamente na taça com o tempo.</span></div></div><div class="wv verb"><div class="wv-en">to pop (a bottle)</div><div class="wv-type">pop open a bottle</div><div class="wv-pt">abrir uma garrafa (informal)</div><div class="wv-ex">"Shall we pop open another bottle?"<span>Abrimos mais uma garrafa?</span></div></div></div><div class="gr"><div class="gr-t">Phrasal Verbs</div><div class="cd"><div class="en"><strong>to open up</strong></div><div class="pt">abrir (do vinho — liberar aromas ao oxigenar) / "It really opens up after 20 minutes." = Ele realmente se abre após 20 minutos.</div><div class="nt gold">Não confunda com "to open a bottle" — "open up" descreve o comportamento do vinho.</div></div><div class="cd"><div class="en"><strong>to round out</strong></div><div class="pt">suavizar, arredondar (taninos, acidez) / "Oak aging rounds out the harsh tannins." = O envelhecimento em carvalho suaviza os taninos ásperos.</div></div><div class="cd"><div class="en"><strong>to stand up to</strong></div><div class="pt">aguentar, combinar bem com algo intenso / "This Shiraz stands up to heavily spiced dishes." = Este Shiraz aguenta pratos muito condimentados.</div></div><div class="cd"><div class="en"><strong>to come into its own</strong></div><div class="pt">atingir seu potencial máximo / "This wine will really come into its own in five years." = Este vinho vai realmente atingir seu potencial em cinco anos.</div></div><div class="cd"><div class="en"><strong>to cut through</strong></div><div class="pt">cortar (a gordura, a untuosidade) / "The acidity cuts through the richness of the duck." = A acidez corta a riqueza do pato.</div></div><div class="cd"><div class="en"><strong>to hold up</strong></div><div class="pt">aguentar / manter a qualidade (com comida ou ao longo do tempo) / "This wine holds up well over the course of a meal." = Este vinho mantém bem ao longo de uma refeição.</div></div><div class="cd"><div class="en"><strong>to pull out</strong></div><div class="pt">tirar da adega para servir / "I pulled out a special bottle for the occasion." = Tirei uma garrafa especial para a ocasião.</div></div></div><div class="gr"><div class="gr-t">Phrasal Nouns (substantivos compostos)</div></div><div class="wv-grid"><div class="wv"><div class="wv-en">wine tasting</div><div class="wv-type">phrasal noun</div><div class="wv-pt">degustação de vinhos</div><div class="wv-ex">"We attended a wine tasting at the estate."<span>Participamos de uma degustação na propriedade.</span></div></div><div class="wv"><div class="wv-en">food pairing</div><div class="wv-type">phrasal noun</div><div class="wv-pt">harmonização com comida</div><div class="wv-ex">"The chef designed a special food pairing menu."<span>O chef criou um cardápio especial de harmonização.</span></div></div><div class="wv"><div class="wv-en">blind tasting</div><div class="wv-type">phrasal noun</div><div class="wv-pt">degustação às cegas</div><div class="wv-ex">"In a blind tasting, even experts can be fooled."<span>Em uma degustação às cegas, até especialistas podem errar.</span></div></div><div class="wv"><div class="wv-en">wine bar</div><div class="wv-type">phrasal noun</div><div class="wv-pt">bar de vinhos</div><div class="wv-ex">"There's a great wine bar near the conference hotel."<span>Há um ótimo bar de vinhos perto do hotel do congresso.</span></div></div><div class="wv"><div class="wv-en">wine country</div><div class="wv-type">phrasal noun</div><div class="wv-pt">região vinícola</div><div class="wv-ex">"We spent a weekend in wine country."<span>Passamos um fim de semana em uma região vinícola.</span></div></div><div class="wv"><div class="wv-en">tasting room</div><div class="wv-type">phrasal noun · jargão</div><div class="wv-pt">ponto de venda / degustação diretamente na vinícola</div><div class="wv-ex">"Tasting room prices are often better than retail."<span>Os preços na vinícola geralmente são melhores que no varejo.</span></div></div></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s3">
+<div class="sc-tag blue"><span class="n">3</span> Collocations</div>
+<h2>Collocations</h2>
+<p class="sc-sub">As combinações naturais que fazem seu inglês soar autêntico</p>
+<p class="sc-intro">Collocations são combinações de palavras que os falantes nativos usam de forma automática. Um brasileiro pode traduzir "vinho encorpado" como "heavy wine" — mas o nativo diz <em>full-bodied wine</em>. Dominar collocations é o que separa um bom inglês de um inglês que soa verdadeiramente fluente.</p><div class="gr"><div class="gr-t">Com o adjetivo DRY / SWEET</div></div><div class="vg"><div class="vi"><div class="en"><strong>bone dry</strong></div><div class="pt">completamente seco (sem açúcar residual)</div></div><div class="vi"><div class="en"><strong>off-dry</strong></div><div class="pt">ligeiramente adocicado / meio seco</div></div><div class="vi"><div class="en"><strong>medium-dry</strong></div><div class="pt">meio seco</div></div><div class="vi"><div class="en"><strong>medium-sweet</strong></div><div class="pt">meio doce</div></div><div class="vi"><div class="en"><strong>rich and sweet</strong></div><div class="pt">rico e doce (Sauternes, Porto)</div></div><div class="vi"><div class="en"><strong>lusciously sweet</strong></div><div class="pt">fartamente doce, de forma luxuriante</div></div></div><div class="gr"><div class="gr-t">Com BODY (corpo)</div></div><div class="vg"><div class="vi"><div class="en"><strong>light-bodied</strong></div><div class="pt">leve (Pinot Noir, Beaujolais)</div></div><div class="vi"><div class="en"><strong>medium-bodied</strong></div><div class="pt">médio corpo</div></div><div class="vi"><div class="en"><strong>full-bodied</strong></div><div class="pt">encorpado (Cabernet, Barolo)</div></div><div class="vi"><div class="en"><strong>big and bold</strong></div><div class="pt">grande e intenso (informal)</div></div><div class="vi"><div class="en"><strong>rich and velvety</strong></div><div class="pt">rico e aveludado</div></div><div class="vi"><div class="en"><strong>silky smooth</strong></div><div class="pt">suave como seda</div></div></div><div class="gr"><div class="gr-t">Com TANNINS (taninos)</div></div><div class="vg"><div class="vi"><div class="en"><strong>grippy tannins</strong></div><div class="pt">taninos que "agarram" a boca (positivo)</div></div><div class="vi"><div class="en"><strong>firm tannins</strong></div><div class="pt">taninos firmes</div></div><div class="vi"><div class="en"><strong>silky tannins</strong></div><div class="pt">taninos sedosos</div></div><div class="vi"><div class="en"><strong>ripe tannins</strong></div><div class="pt">taninos maduros</div></div><div class="vi"><div class="en"><strong>harsh / aggressive tannins</strong></div><div class="pt">taninos ásperos / agressivos</div></div><div class="vi"><div class="en"><strong>fine-grained tannins</strong></div><div class="pt">taninos de grão fino (elegante)</div></div></div><div class="gr"><div class="gr-t">Com ACIDITY (acidez)</div></div><div class="vg"><div class="vi"><div class="en"><strong>crisp acidity</strong></div><div class="pt">acidez fresca / crocante</div></div><div class="vi"><div class="en"><strong>bright acidity</strong></div><div class="pt">acidez viva, animada</div></div><div class="vi"><div class="en"><strong>refreshing acidity</strong></div><div class="pt">acidez refrescante</div></div><div class="vi"><div class="en"><strong>mouth-watering acidity</strong></div><div class="pt">acidez que faz salivar</div></div><div class="vi"><div class="en"><strong>piercing / racy acidity</strong></div><div class="pt">acidez penetrante / vibrante</div></div><div class="vi"><div class="en"><strong>low acidity</strong></div><div class="pt">baixa acidez</div></div></div><div class="gr"><div class="gr-t">Com FINISH (final de boca)</div></div><div class="vg"><div class="vi"><div class="en"><strong>long finish</strong></div><div class="pt">final longo (sinal de qualidade)</div></div><div class="vi"><div class="en"><strong>short finish</strong></div><div class="pt">final curto</div></div><div class="vi"><div class="en"><strong>clean finish</strong></div><div class="pt">final limpo</div></div><div class="vi"><div class="en"><strong>lingering finish</strong></div><div class="pt">final persistente</div></div><div class="vi"><div class="en"><strong>dry finish</strong></div><div class="pt">final seco</div></div><div class="vi"><div class="en"><strong>bitter finish</strong></div><div class="pt">final amargo</div></div></div><div class="gr"><div class="gr-t">Collocations com WINE (verbo + wine)</div></div><div class="wt-wrap"><table class="wt"><thead><tr><th>Collocation</th><th>Tradução / Uso</th></tr></thead>
+<tbody>
+<tr><td>sip wine</td><td>sorver vinho (elegante, pausado)</td></tr>
+<tr><td>savor wine</td><td>saborear / apreciar o vinho</td></tr>
+<tr><td>swirl wine</td><td>girar o vinho na taça</td></tr>
+<tr><td>sample wine</td><td>experimentar / provar uma amostra</td></tr>
+<tr><td>order wine</td><td>pedir vinho</td></tr>
+<tr><td>serve wine</td><td>servir vinho</td></tr>
+<tr><td>uncork wine</td><td>abrir a garrafa (com saca-rolhas)</td></tr>
+<tr><td>chill wine</td><td>gelar / resfriar o vinho</td></tr>
+<tr><td>age wine</td><td>envelhecer o vinho</td></tr>
+<tr><td>store wine</td><td>armazenar / guardar o vinho</td></tr>
+</tbody></table></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s4">
+<div class="sc-tag blue"><span class="n">4</span> Regions & Styles</div>
+<h2>Regiões &amp; Estilos</h2>
+<p class="sc-sub">O vocabulário geográfico e estilístico para conversas de alto nível</p>
+<div class="gr"><div class="gr-t">Velho Mundo vs. Novo Mundo</div></div><div class="hl"><div class="hl-t">Old World vs. New World <span class="badge-j">jargão essencial</span></div><div class="wt-wrap"><table class="wt"><thead><tr><th>Old World (Velho Mundo)</th><th>New World (Novo Mundo)</th></tr></thead>
+<tbody>
+<tr><td>França, Itália, Espanha, Portugal, Alemanha</td><td>EUA, Austrália, Nova Zelândia, África do Sul, Argentina, Chile, Brasil</td></tr>
+<tr><td>Estilo: mais terroir-driven, mineral, austero</td><td>Estilo: mais fruit-forward, generoso, acessível jovem</td></tr>
+<tr><td>Rótulo pelo <em>lugar</em> (ex: Burgundy, Chianti)</td><td>Rótulo pela <em>uva</em> (ex: Malbec, Chardonnay)</td></tr>
+</tbody></table></div></div><div class="gr"><div class="gr-t">Regiões Clássicas — Como Descrever em Inglês</div></div><div class="rg"><div class="rg-n">Bordeaux <span class="rg-c">(França)</span></div><div class="rg-d">Home to some of the world's most prestigious estates (<em>châteaux</em>). Reds are Cabernet Sauvignon-dominant blends — structured, age-worthy, and cerebral. Whites from Pessac-Léognan are mineral and complex.</div></div><div class="rg"><div class="rg-n">Burgundy <span class="rg-c">(França)</span></div><div class="rg-d">The spiritual home of Pinot Noir and Chardonnay. Wines are terroir-driven to an almost obsessive degree — a matter of meters between vineyards can mean enormous price and style differences. Notoriously expensive.</div></div><div class="rg"><div class="rg-n">Tuscany <span class="rg-c">(Itália)</span></div><div class="rg-d">Home of Chianti, Brunello di Montalcino, and the Super Tuscans. Sangiovese-based reds are high in acidity, with earthy and cherry-driven profiles. The "Super Tuscans" broke DOC rules to create internationally styled blends.</div></div><div class="rg"><div class="rg-n">Napa Valley <span class="rg-c">(EUA)</span></div><div class="rg-d">California's most celebrated wine region. Known for opulent, fruit-forward Cabernet Sauvignon with generous oak and high alcohol. Cult wines from here command astronomical prices at auction.</div></div><div class="rg"><div class="rg-n">Mendoza <span class="rg-c">(Argentina)</span></div><div class="rg-d">The heartland of Argentine Malbec. High-altitude vineyards produce wines with intense color, rich dark fruit, and velvety tannins. Increasingly respected on the international stage.</div></div><div class="rg"><div class="rg-n">Marlborough <span class="rg-c">(Nova Zelândia)</span></div><div class="rg-d">The world reference for New Zealand Sauvignon Blanc — intensely aromatic, with explosive citrus and passionfruit notes and a razor-sharp acidity. A benchmark for the variety globally.</div></div><div class="gr"><div class="gr-t">Vocabulário Geográfico &amp; Vinícola</div></div><div class="wv-grid"><div class="wv"><div class="wv-en">terroir</div><div class="wv-type">noun · jargão francês anglicizado</div><div class="wv-pt">terroir — conjunto de fatores naturais (solo, clima, topografia) que definem um vinho</div><div class="wv-ex">"This wine really expresses its terroir."<span>Este vinho expressa verdadeiramente seu terroir.</span></div></div><div class="wv"><div class="wv-en">appellation</div><div class="wv-type">noun · jargão</div><div class="wv-pt">denominação de origem / zona geográfica regulamentada</div><div class="wv-ex">"It's an AOC Burgundy from a premier cru appellation."<span>É um Borgonha AOC de uma denominação premier cru.</span></div></div><div class="wv"><div class="wv-en">estate / château / winery</div><div class="wv-type">noun</div><div class="wv-pt">propriedade vinícola (château = francês; winery = inglês)</div><div class="wv-ex">"We visited the estate and met the winemaker."<span>Visitamos a propriedade e conhecemos o enólogo.</span></div></div><div class="wv"><div class="wv-en">winemaker / viticulturist</div><div class="wv-type">noun</div><div class="wv-pt">enólogo / viticultor</div><div class="wv-ex">"The winemaker trained in Bordeaux."<span>O enólogo se formou em Bordeaux.</span></div></div><div class="wv"><div class="wv-en">vineyard</div><div class="wv-type">noun</div><div class="wv-pt">vinhedo</div><div class="wv-ex">"The vineyard sits at 900 meters above sea level."<span>O vinhedo fica a 900 metros acima do nível do mar.</span></div></div><div class="wv"><div class="wv-en">harvest / vintage</div><div class="wv-type">noun</div><div class="wv-pt">colheita / safra</div><div class="wv-ex">"2015 was an exceptional harvest in Bordeaux."<span>2015 foi uma colheita excepcional em Bordeaux.</span></div></div></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s5">
+<div class="sc-tag blue"><span class="n">5</span> Expressions & Jargon</div>
+<h2>Expressões &amp; Jargões</h2>
+<p class="sc-sub">Do sommelier ao connoisseur — o que falam os que realmente entendem</p>
+<div class="gr"><div class="gr-t">Jargões de Especialista</div></div><div class="wt-wrap"><table class="wt"><thead><tr><th>Jargão</th><th>O que significa</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr>
+<td>fruit-forward <span class="badge-j">jargão</span></td>
+<td>Vinho em que as notas de fruta dominam — típico do Novo Mundo</td>
+<td><em>"A fruit-forward Merlot from Chile."</em></td>
+</tr>
+<tr>
+<td>terroir-driven <span class="badge-j">jargão</span></td>
+<td>Vinho que reflete seu terroir acima da fruta ou do trabalho do enólogo</td>
+<td><em>"A classic, terroir-driven Burgundy."</em></td>
+</tr>
+<tr>
+<td>mineral / stony</td>
+<td>Notas de pedra, giz, flint — típico de Chablis, Riesling alemão</td>
+<td><em>"A mineral, flinty Chablis."</em></td>
+</tr>
+<tr>
+<td>austere</td>
+<td>Vinho sério, sem exuberância — requer tempo para abrir</td>
+<td><em>"Young Barolo can be quite austere."</em></td>
+</tr>
+<tr>
+<td>opulent</td>
+<td>Generoso, exuberante, rico — qualidade premium</td>
+<td><em>"An opulent, hedonistic Napa Cab."</em></td>
+</tr>
+<tr>
+<td>bretty / barnyard <span class="badge-j">jargão</span></td>
+<td>Nota de curral / estábulo — causada por levedura Brettanomyces. Pode ser positiva (complexidade) ou negativa (falha).</td>
+<td><em>"There's a slight barnyard character — some love it."</em></td>
+</tr>
+<tr>
+<td>corked <span class="badge-j">jargão</span></td>
+<td>Vinho com defeito por contaminação da rolha (TCA) — cheiro de papelão molhado</td>
+<td><em>"This bottle is corked — we should send it back."</em></td>
+</tr>
+<tr>
+<td>legs / tears</td>
+<td>Trilhas que o vinho deixa ao deslizar pelo interior da taça — indicam álcool e glicerol</td>
+<td><em>"Look at those beautiful legs — high alcohol for sure."</em></td>
+</tr>
+<tr>
+<td>nose / bouquet</td>
+<td>Aroma / nariz do vinho — conjunto de cheiros percebidos ao cheirar a taça</td>
+<td><em>"The nose is incredibly complex — dark fruit, leather, spice."</em></td>
+</tr>
+<tr>
+<td>palate</td>
+<td>Paladar — o que se percebe ao degustar</td>
+<td><em>"On the palate, there's a wonderful texture."</em></td>
+</tr>
+<tr>
+<td>age-worthy / cellar-worthy</td>
+<td>Vinho com potencial para envelhecer / ser guardado em adega</td>
+<td><em>"This is a seriously age-worthy wine."</em></td>
+</tr>
+<tr>
+<td>QPR (Quality-Price Ratio)</td>
+<td>Custo-benefício — relação qualidade/preço</td>
+<td><em>"Incredible QPR — $25 and it drinks like a $60 wine."</em></td>
+</tr>
+<tr>
+<td>on release</td>
+<td>No momento em que o vinho chega ao mercado</td>
+<td><em>"This wine is already exceptional on release."</em></td>
+</tr>
+<tr>
+<td>drinking window</td>
+<td>Janela de consumo ideal — período em que o vinho está no seu melhor</td>
+<td><em>"The drinking window is 2026 to 2035."</em></td>
+</tr>
+</tbody></table></div><div class="gr"><div class="gr-t">Expressões Idiomáticas &amp; Figuradas</div><div class="cd"><div class="en">"Wine and dine someone"</div><div class="pt">levar alguém para jantar bem e impressioná-lo — não necessariamente sobre vinho</div><div class="nt gold">"We wined and dined the investors all week." = Levamos os investidores a jantares sofisticados a semana toda.</div></div><div class="cd"><div class="en">"Fine wine, like fine art, appreciates over time."</div><div class="pt">Vinho fino, como arte, se valoriza com o tempo — expressão usada em contextos de investimento e lifestyle.</div></div><div class="cd"><div class="en">"Good wine needs no bush."</div><div class="pt">Provérbio inglês: boa qualidade não precisa de propaganda. (Shakespeare, As You Like It)</div><div class="nt gold">Usado em contextos de networking para quem não precisa se autopromover excessivamente.</div></div><div class="cd"><div class="en">"This is the good stuff."</div><div class="pt">Expressão informal: "Isso aqui é do bom." — ao abrir um vinho especial.</div></div><div class="cd"><div class="en">"Cheers!" / "To your health!" / "Here's to us!"</div><div class="pt">Brinde! / À sua saúde! / Pelo nosso encontro!</div><div class="nt gold">"Here's to a successful conference!" = Pelo sucesso do congresso!</div></div><div class="cd"><div class="en">"It's not my cup of tea — or glass of wine."</div><div class="pt">Adaptação humorística do idiom "not my cup of tea" — não é do meu gosto.</div></div></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s6">
+<div class="sc-tag blue"><span class="n">6</span> Tasting Notes</div>
+<h2>Tasting Notes</h2>
+<p class="sc-sub">Como descrever um vinho com precisão e elegância em inglês</p>
+<p class="sc-intro">Uma <em>tasting note</em> profissional segue uma estrutura consistente: <strong>1. Aparência (appearance/color)</strong> → <strong>2. Nariz / Aroma (nose/bouquet)</strong> → <strong>3. Paladar (palate)</strong> → <strong>4. Final (finish)</strong> → <strong>5. Conclusão e potencial de guarda</strong>. Dominar esse fluxo permite que você fale sobre qualquer vinho com autoridade.</p><div class="gr"><div class="gr-t">Cor / Appearance</div></div><div class="vg"><div class="vi"><div class="en">pale lemon / gold / amber</div><div class="pt">limão pálido / dourado / âmbar (brancos)</div></div><div class="vi"><div class="en">ruby / garnet / purple</div><div class="pt">rubi / granada / púrpura (tintos jovens)</div></div><div class="vi"><div class="en">brick / tawny</div><div class="pt">tijolo / acastanhado (tintos maduros)</div></div><div class="vi"><div class="en">deep / vibrant / pale</div><div class="pt">intenso / vibrante / pálido</div></div><div class="vi"><div class="en">clear / hazy / cloudy</div><div class="pt">límpido / levemente turvo / turvo</div></div></div><div class="gr"><div class="gr-t">Nariz / Nose</div></div><div class="vg"><div class="vi"><div class="en">notes of / hints of / aromas of</div><div class="pt">notas de / traços de / aromas de</div></div><div class="vi"><div class="en">expressive / restrained / closed</div><div class="pt">expressivo / retraído / fechado</div></div><div class="vi"><div class="en">floral / herbal / earthy / spicy</div><div class="pt">floral / herbáceo / terroso / condimentado</div></div><div class="vi"><div class="en">oaky / toasty / smoky</div><div class="pt">amadeirado / tostado / defumado</div></div><div class="vi"><div class="en">complex / layered / nuanced</div><div class="pt">complexo / em camadas / nuançado</div></div></div><div class="gr"><div class="gr-t">Tasting Notes Completas — Exemplos Reais</div></div><div class="tn"><div class="tn-w">2018 Château Léoville-Barton, Saint-Julien</div><div class="tn-r">Bordeaux · Cabernet Sauvignon / Merlot blend</div><div class="tn-t">"Deep garnet in the glass with a ruby rim. The nose opens with classic Médoc restraint — pencil shavings, blackcurrant, cedar, and a whisper of tobacco. On the palate, the wine is structured and precise, with firm but polished tannins and a long, dry finish that lingers with notes of graphite and dark fruit. Serious and age-worthy."</div><div class="tn-p">Vermelho granada intenso com borda rubi. O nariz abre com a clássica contenção do Médoc — grafite (pencil shavings), groselha negra, cedro e um toque de tabaco. No paladar, o vinho é estruturado e preciso, com taninos firmes mas polidos e um final longo e seco que persiste com notas de grafite e fruta negra. Sério e com potencial de guarda.</div></div><div class="tn"><div class="tn-w">2021 Cloudy Bay Sauvignon Blanc</div><div class="tn-r">Marlborough, Nova Zelândia · Sauvignon Blanc</div><div class="tn-t">"Pale lemon in color with a faint green tinge. The nose is immediately expressive and aromatic — passionfruit, fresh-cut grass, white grapefruit, and a distinctive flinty mineral note. Crisp and vibrant on the palate, with mouth-watering acidity that perfectly balances the tropical fruit. The finish is clean, refreshing, and effortlessly elegant."</div><div class="tn-p">Limão pálido com leve toque verde. O nariz é imediatamente expressivo — maracujá, grama recém-cortada, grapefruit branca e uma nota mineral de sílex. Fresco e vibrante no paladar, com acidez que faz salivar e equilibra perfeitamente a fruta tropical. O final é limpo, refrescante e de elegância sem esforço.</div></div><div class="gr"><div class="gr-t">Verbos para Descrever Aromas &amp; Sabores</div></div><div class="wt-wrap"><table class="wt"><thead><tr><th>Verbo / Estrutura</th><th>Tradução</th><th>Exemplo</th></tr></thead>
+<tbody>
+<tr><td>I can detect notes of…</td><td>Consigo detectar notas de…</td><td><em>"I can detect notes of vanilla and toast."</em></td></tr>
+<tr><td>There are hints of…</td><td>Há traços de…</td><td><em>"There are hints of eucalyptus on the nose."</em></td></tr>
+<tr><td>It reminds me of…</td><td>Me lembra…</td><td><em>"It reminds me of dried cherries and leather."</em></td></tr>
+<tr><td>It tastes like…</td><td>Tem sabor de…</td><td><em>"It tastes like ripe blackberries with a touch of spice."</em></td></tr>
+<tr><td>The wine shows…</td><td>O vinho apresenta…</td><td><em>"The wine shows remarkable complexity."</em></td></tr>
+<tr><td>It opens up to reveal…</td><td>Abre revelando…</td><td><em>"It opens up to reveal layers of dark fruit."</em></td></tr>
+<tr><td>The palate is greeted by…</td><td>O paladar é recebido por…</td><td><em>"The palate is greeted by silky tannins."</em></td></tr>
+</tbody></table></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s7">
+<div class="sc-tag blue"><span class="n">7</span> Real Situations</div>
+<h2>Situações Reais</h2>
+<p class="sc-sub">O que dizer — e como dizer — em cada contexto social</p>
+<div class="gr"><div class="gr-t">Em um restaurante fine dining</div><div class="cd"><div class="en">"Could we see the <strong>wine list</strong>, please?"</div><div class="pt">Poderíamos ver a carta de vinhos?</div></div><div class="cd"><div class="en">"We're having the lamb — what would you <strong>recommend to pair with</strong> it?"</div><div class="pt">Vamos pedir o cordeiro — o que você recomendaria para harmonizar?</div></div><div class="cd"><div class="en">"Something in the <strong>$60–80 range</strong>, please."</div><div class="pt">Algo entre $60 e $80, por favor.</div></div><div class="cd"><div class="en">"This bottle may be <strong>corked</strong> — could you check it, please?"</div><div class="pt">Esta garrafa pode estar corked — poderia verificar?</div></div><div class="cd"><div class="en">"Would you mind <strong>decanting</strong> it for us?"</div><div class="pt">Poderia decantar para nós?</div></div></div><div class="gr"><div class="gr-t">Em uma vinícola / winery visit</div><div class="cd"><div class="en">"Do you offer <strong>tastings</strong> here at the winery?"</div><div class="pt">Vocês oferecem degustações na vinícola?</div></div><div class="cd"><div class="en">"How long does this wine <strong>age in oak</strong>?"</div><div class="pt">Quanto tempo este vinho passa em carvalho?</div></div><div class="cd"><div class="en">"What's the <strong>drinking window</strong> on this one?"</div><div class="pt">Qual é a janela de consumo ideal?</div></div><div class="cd"><div class="en">"Is this a <strong>single vineyard</strong> wine or a blend from multiple sites?"</div><div class="pt">É um vinho de vinhedo único ou um blend de várias parcelas?</div></div><div class="cd"><div class="en">"Could I take a <strong>mixed case</strong>?"</div><div class="pt">Posso levar uma caixa mista (de diferentes rótulos)?</div></div></div><div class="gr"><div class="gr-t">Networking / jantar de gala</div><div class="cd"><div class="en">"Are you a <strong>wine enthusiast</strong>?"</div><div class="pt">Você é apreciador(a) de vinhos?</div></div><div class="cd"><div class="en">"I tend to <strong>gravitate toward</strong> Old World reds — Burgundy, mostly."</div><div class="pt">Tendo a me inclinar para tintos do Velho Mundo — Borgonha, principalmente.</div></div><div class="cd"><div class="en">"Have you tried anything interesting <strong>lately</strong>?"</div><div class="pt">Você provou algo interessante ultimamente?</div></div><div class="cd"><div class="en">"This one's <strong>quite approachable</strong> — drinks beautifully right now."</div><div class="pt">Este é bem acessível — bebe muito bem agora.</div></div><div class="cd"><div class="en">"I find <strong>natural wines</strong> divisive — you either love them or you don't."</div><div class="pt">Acho que vinhos naturais dividem opiniões — ou você ama ou não gosta.</div></div></div><div class="gr"><div class="gr-t">Em viagem — aeroporto / hotel</div><div class="cd"><div class="en">"I'll have a glass of the <strong>house white</strong>, please."</div><div class="pt">Vou querer uma taça do branco da casa, por favor.</div></div><div class="cd"><div class="en">"Is the Champagne included in <strong>Business Class</strong>?"</div><div class="pt">O Champagne está incluído na Business Class?</div></div><div class="cd"><div class="en">"Could you store this in the hotel wine cellar?"</div><div class="pt">Poderiam guardar isto na adega do hotel?</div></div><div class="cd"><div class="en">"We'd like to order something <strong>off the menu</strong> — do you have a reserve list?"</div><div class="pt">Gostaríamos de pedir algo fora do cardápio — vocês têm uma lista reserva?</div></div></div><div class="dlg"><div class="dlg-h">Diálogo Prático</div><div class="dlg-ctx">Diálogo Completo — Networking Dinner</div><div class="ln"><div class="av them">Dr. A</div><div class="bb"><div class="en">"What a beautiful selection on the wine list tonight. Are you much of a wine person?"</div><div class="pt">Que seleção bonita na carta de vinhos esta noite. Você é muito fã de vinho?</div></div></div><div class="ln"><div class="av you">Dr. B</div><div class="bb"><div class="en">"I'd say I'm an enthusiast rather than an expert. I tend to gravitate toward Italian reds — Barolo and Amarone, mostly. What about you?"</div><div class="pt">Eu diria que sou um entusiasta mais do que especialista. Tendo a me inclinar para tintos italianos — Barolo e Amarone, principalmente. E você?</div></div></div><div class="ln"><div class="av them">Dr. A</div><div class="bb"><div class="en">"I'm more of a Burgundy person, to be honest. Old World, terroir-driven — I love the way a great Pinot Noir opens up in the glass. Have you had a chance to try the 2019 vintage? Apparently it was outstanding."</div><div class="pt">Sou mais de Borgonha, para ser honesto. Velho Mundo, orientado pelo terroir — adoro como um grande Pinot Noir se abre na taça. Você teve chance de experimentar a safra de 2019? Aparentemente foi extraordinária.</div></div></div><div class="ln"><div class="av you">Dr. B</div><div class="bb"><div class="en">"I haven't, but it's on my radar. Shall we ask the sommelier to recommend something? I'm happy to go by the bottle if you'd like to explore."</div><div class="pt">Ainda não, mas está no meu radar. Pedimos ao sommelier para recomendar algo? Fico à vontade para pedir uma garrafa se quiser explorar.</div></div></div></div></section>
+<div class="sep"><span class="d"></span></div>
+<section class="sc" id="s8">
+<div class="sc-tag blue"><span class="n">8</span> Practice & Review</div>
+<h2>Prática &amp; Revisão</h2>
+<p class="sc-sub">Consolide o que aprendeu — collocations, jargões e situações reais</p>
+<div class="gr"><div class="gr-t">Quiz Interativo</div></div><div class="qz"><div class="qz-q">1. Como você diz corretamente "vinho encorpado" em inglês?</div><div class="qz-os"><button type="button" class="qz-o" data-c="0">Heavy wine</button><button type="button" class="qz-o" data-c="1">Full-bodied wine</button><button type="button" class="qz-o" data-c="0">Strong wine</button><button type="button" class="qz-o" data-c="0">Thick wine</button></div><div class="qz-f"><strong>Full-bodied</strong> é a collocation correta. "Heavy" não é usado — soa como tradução literal. Lembre-se: light-bodied, medium-bodied, full-bodied.</div></div><div class="qz"><div class="qz-q">2. O sommelier diz "This wine is corked." O que isso significa?</div><div class="qz-os"><button type="button" class="qz-o" data-c="0">O vinho é fechado com rolha (e não tampa de rosca)</button><button type="button" class="qz-o" data-c="0">O vinho ainda não foi aberto</button><button type="button" class="qz-o" data-c="1">O vinho está com defeito — contaminado pela rolha (TCA)</button><button type="button" class="qz-o" data-c="0">O vinho precisa ser decantado</button></div><div class="qz-f"><strong>"Corked"</strong> é um jargão essencial: significa que o vinho foi contaminado por TCA (2,4,6-tricloroanisol) vindo da rolha. O aroma lembra papelão molhado. Você pode dizer: <em>"I think this is corked — could we have a replacement?"</em></div></div><div class="qz"><div class="qz-q">3. Qual phrasal verb completa corretamente a frase? "This young Barolo will really _______ in 10 years."</div><div class="qz-os"><button type="button" class="qz-o" data-c="0">open out</button><button type="button" class="qz-o" data-c="1">come into its own</button><button type="button" class="qz-o" data-c="0">stand out</button><button type="button" class="qz-o" data-c="0">show off</button></div><div class="qz-f"><strong>"Come into its own"</strong> significa atingir seu potencial máximo — perfeito para vinhos com potencial de guarda. <em>"This wine will really come into its own after a decade in the cellar."</em></div></div><div class="qz"><div class="qz-q">4. Como você pede uma recomendação de harmonização ao sommelier, de forma elegante?</div><div class="qz-os"><button type="button" class="qz-o" data-c="0">"What wine goes with my food?"</button><button type="button" class="qz-o" data-c="0">"Give me a wine for the meat."</button><button type="button" class="qz-o" data-c="1">"We're having the venison — could you suggest something to pair with it, perhaps in the $50–70 range?"</button><button type="button" class="qz-o" data-c="0">"Which wine is the best here?"</button></div><div class="qz-f">A opção correta usa a estrutura natural: <strong>mencionar o prato + usar "pair with" + especificar o budget</strong>. Isso demonstra fluência e bom gosto. Evite "goes with" em contextos formais — prefira "pair with" ou "complement".</div></div><div class="qz"><div class="qz-q">5. Em uma degustação, você percebe aromas mas o vinho parece "fechado". Qual expressão você usa?</div><div class="qz-os"><button type="button" class="qz-o" data-c="0">"The wine smells nothing."</button><button type="button" class="qz-o" data-c="1">"The nose is quite restrained at the moment — it needs time to open up."</button><button type="button" class="qz-o" data-c="0">"The wine doesn't have perfume."</button><button type="button" class="qz-o" data-c="0">"It's a boring wine right now."</button></div><div class="qz-f">Perfeito uso do jargão: <strong>"restrained"</strong> (retraído/contido) e <strong>"open up"</strong> (abrir-se). Vinhos jovens de qualidade costumam ser fechados e se revelam com tempo no copo ou após decantação.</div></div><div class="gr"><div class="gr-t">Expressões para Levar — 10 Frases Prontas para Usar Agora</div><div class="cd"><div class="en">"I tend to gravitate toward <strong>Old World reds</strong>."</div><div class="pt">Tendo a preferir tintos do Velho Mundo.</div></div><div class="cd"><div class="en">"This has a wonderfully <strong>lingering finish</strong>."</div><div class="pt">Este tem um final persistente maravilhoso.</div></div><div class="cd"><div class="en">"I can detect <strong>notes of</strong> dark cherry and cedar."</div><div class="pt">Consigo detectar notas de cereja negra e cedro.</div></div><div class="cd"><div class="en">"Could you suggest something <strong>to pair with</strong> the duck?"</div><div class="pt">Poderia sugerir algo para harmonizar com o pato?</div></div><div class="cd"><div class="en">"It's <strong>fruit-forward</strong> but beautifully balanced."</div><div class="pt">É orientado pela fruta, mas muito bem equilibrado.</div></div><div class="cd"><div class="en">"Let's <strong>let it breathe</strong> for a few minutes."</div><div class="pt">Deixemos respirar por alguns minutos.</div></div><div class="cd"><div class="en">"The <strong>drinking window</strong> on this is 2025 to 2032."</div><div class="pt">A janela de consumo ideal é de 2025 a 2032.</div></div><div class="cd"><div class="en">"I find <strong>Riesling</strong> to be wildly underrated."</div><div class="pt">Acho que o Riesling é muito subestimado.</div></div><div class="cd"><div class="en">"This is <strong>incredibly age-worthy</strong> — I'd cellar it for at least five years."</div><div class="pt">Este tem um potencial de guarda incrível — eu guardaria por pelo menos cinco anos.</div></div><div class="cd"><div class="en">"Shall we <strong>pop open</strong> something special?"</div><div class="pt">Abrimos algo especial?</div></div></div><div class="bk final"><h4>Parabéns.</h4><p>Você concluiu a aula de Wine English do Instituto MD Talk.<br/>Você agora tem o vocabulário, os phrasal verbs, as collocations e as expressões<br/>para falar sobre vinho com elegância e autoridade em qualquer contexto internacional.</p><p class="bk-sign">Instituto MD Talk · Medical &amp; Lifestyle English</p></div></section>
+<div class="sep"><span class="d"></span></div>
+<div class="vb-dl"><a class="vb-dl-btn" href="viaje-bem-bonus-vinhos.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19.5h14"/></svg>Baixar o material em PDF</a><span class="vb-dl-meta">PDF · 17 páginas</span></div>
+<nav class="vb-pager" aria-label="Navegação entre módulos">
+  <a class="vb-card vb-prev" href="../07-farmacia/"><span class="vb-dir">← Anterior</span><span class="vb-num">Módulo 07</span><span class="vb-t">Pharmacy &amp; Medical Emergencies</span></a>
+  <a class="vb-home" href="../">Todos os módulos</a>
+  <a class="vb-card vb-next" href="../bonus-final/"><span class="vb-dir">Próximo →</span><span class="vb-num">Bônus Final</span><span class="vb-t">The Confident Traveler</span></a>
+</nav>
+<footer class="footer">
+  <div class="footer-b">Wine English — English for Travelers</div>
+  <p class="footer-t">Conteúdo exclusivo para fins educacionais.<br>Desenvolvido com excelência para alunos que buscam comunicação internacional de alto nível.</p>
+  <div class="sig">
+    <div><div class="sig-n">Thaiana Faria</div><div class="sig-r">Especialista em Inglês Médico e Comunicação Científica · MD Talk</div></div>
+    <div><div class="sig-n">Thiago Faria</div><div class="sig-r">Produção de Conteúdo Técnico · The Engine Lab</div></div>
+  </div>
+</footer>
+</main>
+<script>
+document.querySelectorAll('.qz').forEach(function (q) {
+  q.querySelectorAll('.qz-o').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (q.classList.contains('done')) return;
+      q.classList.add('done');
+      b.classList.add(b.dataset.c === '1' ? 'ok' : 'no');
+      q.querySelector('.qz-o[data-c="1"]').classList.add('ok');
+    });
+  });
+});
+</script>
+</body>
+</html>
